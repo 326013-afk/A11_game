@@ -230,8 +230,10 @@ function resetGame() {
 
     if (!runner) {
         runner = Runner.create();
-        Runner.run(runner, engine);
+    } else {
+        Runner.stop(runner);
     }
+    Runner.run(runner, engine);
 }
 
 /**
